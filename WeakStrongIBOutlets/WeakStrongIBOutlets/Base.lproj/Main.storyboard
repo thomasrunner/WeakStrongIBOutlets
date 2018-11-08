@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nsO-ar-EZu">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Weak vs Strong IBOutlets-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WeakStrongIBOutlets" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Weak IBOutlet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSQ-eR-0qX">
+                                <rect key="frame" x="20" y="114" width="109" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="49" translatesAutoresizingMaskIntoConstraints="NO" id="Xmb-Vy-JDD">
+                                <rect key="frame" x="20" y="145" width="317" height="30"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="akF-MN-lV3">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="Add"/>
+                                        <connections>
+                                            <action selector="weakIBOutletButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YuN-ak-yhL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1O-Ni-ESr">
+                                        <rect key="frame" x="79" y="0.0" width="55" height="30"/>
+                                        <state key="normal" title="Remove"/>
+                                        <connections>
+                                            <action selector="weakIBOutletButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uQe-55-RxX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hoH-jx-bcX">
+                                        <rect key="frame" x="183" y="0.0" width="53" height="30"/>
+                                        <state key="normal" title="Change"/>
+                                        <connections>
+                                            <action selector="weakIBOutletButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7E5-TV-Reb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bd2-t7-LE3">
+                                        <rect key="frame" x="285" y="0.0" width="32" height="30"/>
+                                        <state key="normal" title="Hide"/>
+                                        <connections>
+                                            <action selector="weakIBOutletButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IpT-8X-rye"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Strong IBOutlet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bM-Ka-Nm1">
+                                <rect key="frame" x="20" y="183" width="118" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="49" translatesAutoresizingMaskIntoConstraints="NO" id="s14-lk-ad0">
+                                <rect key="frame" x="20" y="221" width="317" height="30"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2VI-CF-Ibh">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="Add"/>
+                                        <connections>
+                                            <action selector="strongIBOutletButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jGm-oX-Spg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u1A-Bf-WNL">
+                                        <rect key="frame" x="79" y="0.0" width="55" height="30"/>
+                                        <state key="normal" title="Remove"/>
+                                        <connections>
+                                            <action selector="strongIBOutletButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AKj-LI-KfQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uvF-4k-1k5">
+                                        <rect key="frame" x="183" y="0.0" width="53" height="30"/>
+                                        <state key="normal" title="Change"/>
+                                        <connections>
+                                            <action selector="strongIBOutletButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="La1-Gf-jtZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7fI-9h-9em">
+                                        <rect key="frame" x="285" y="0.0" width="32" height="30"/>
+                                        <state key="normal" title="Hide"/>
+                                        <connections>
+                                            <action selector="strongIBOutletButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ae5-Yn-pC6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Weak Property" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MaZ-8t-gsS">
+                                <rect key="frame" x="20" y="259" width="113.5" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="49" translatesAutoresizingMaskIntoConstraints="NO" id="SLb-sJ-Pih">
+                                <rect key="frame" x="20" y="297" width="317" height="30"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tIX-4g-9Qr">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="Add"/>
+                                        <connections>
+                                            <action selector="weakIBOutletPropertyButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SGC-qm-HDN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQV-RJ-8Ab">
+                                        <rect key="frame" x="79" y="0.0" width="55" height="30"/>
+                                        <state key="normal" title="Remove"/>
+                                        <connections>
+                                            <action selector="weakIBOutletPropertyButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CvW-O1-PGX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yBc-WX-NGa">
+                                        <rect key="frame" x="183" y="0.0" width="53" height="30"/>
+                                        <state key="normal" title="Change"/>
+                                        <connections>
+                                            <action selector="weakIBOutletPropertyButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y7M-af-8Fr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ThL-uT-T8H">
+                                        <rect key="frame" x="285" y="0.0" width="32" height="30"/>
+                                        <state key="normal" title="Hide"/>
+                                        <connections>
+                                            <action selector="weakIBOutletPropertyButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F0l-F0-I4m"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Strong Property" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e67-ef-D6Y">
+                                <rect key="frame" x="20" y="335" width="122.5" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="49" translatesAutoresizingMaskIntoConstraints="NO" id="1bO-O4-1cF">
+                                <rect key="frame" x="20" y="373" width="317" height="30"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdF-8y-KQM">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="Add"/>
+                                        <connections>
+                                            <action selector="strongIBOutletPropertyButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="etg-A1-CgQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QEI-eZ-qRG">
+                                        <rect key="frame" x="79" y="0.0" width="55" height="30"/>
+                                        <state key="normal" title="Remove"/>
+                                        <connections>
+                                            <action selector="strongIBOutletPropertyButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RNg-H2-FD4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTc-Zp-LRV">
+                                        <rect key="frame" x="183" y="0.0" width="53" height="30"/>
+                                        <state key="normal" title="Change"/>
+                                        <connections>
+                                            <action selector="strongIBOutletPropertyButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G8R-mh-afP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H9b-Qh-rIS">
+                                        <rect key="frame" x="285" y="0.0" width="32" height="30"/>
+                                        <state key="normal" title="Hide"/>
+                                        <connections>
+                                            <action selector="strongIBOutletPropertyButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3xR-rf-MGd"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DMM-hr-uPi">
+                                <rect key="frame" x="62" y="465" width="233" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Navigate To Other View Controller"/>
+                                <connections>
+                                    <segue destination="0YL-k4-Y6B" kind="show" id="SEH-KJ-X1k"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Weak vs Strong IBOutlets" id="3vo-0b-tr4"/>
+                    <connections>
+                        <outlet property="addStrongIBOutletButton" destination="2VI-CF-Ibh" id="LLZ-01-Okw"/>
+                        <outlet property="addStrongPropertyButton" destination="cdF-8y-KQM" id="gO5-3C-ZbS"/>
+                        <outlet property="addWeakIBOutletButton" destination="akF-MN-lV3" id="j6b-9s-wuz"/>
+                        <outlet property="addWeakPropertyButton" destination="tIX-4g-9Qr" id="vzo-E6-vzf"/>
+                        <outlet property="changeStrongIBOutletButton" destination="uvF-4k-1k5" id="IHE-Fk-y0T"/>
+                        <outlet property="changeStrongPropertyButton" destination="oTc-Zp-LRV" id="9Pz-jV-mdm"/>
+                        <outlet property="changeWeakIBOutletButton" destination="hoH-jx-bcX" id="aHE-WJ-0Xg"/>
+                        <outlet property="changeWeakPropertyButton" destination="yBc-WX-NGa" id="zyp-dN-n0Y"/>
+                        <outlet property="hideStrongIBOutletButton" destination="7fI-9h-9em" id="gmz-8N-STz"/>
+                        <outlet property="hideStrongPropertyButton" destination="H9b-Qh-rIS" id="fYu-0B-lj2"/>
+                        <outlet property="hideWeakIBOutletButton" destination="bd2-t7-LE3" id="E03-Al-ywQ"/>
+                        <outlet property="hideWeakPropertyButton" destination="ThL-uT-T8H" id="eVd-j1-pyn"/>
+                        <outlet property="removeStrongIBOutletButton" destination="u1A-Bf-WNL" id="kgo-s4-Bhj"/>
+                        <outlet property="removeStrongPropertyButton" destination="QEI-eZ-qRG" id="auL-xy-E0T"/>
+                        <outlet property="removeWeakIBOutletButton" destination="g1O-Ni-ESr" id="gUn-fv-oZT"/>
+                        <outlet property="removeWeakPropertyButton" destination="sQV-RJ-8Ab" id="Djk-8q-yhV"/>
+                        <outlet property="strongIBOutletLabel" destination="6bM-Ka-Nm1" id="Z7f-qi-4cM"/>
+                        <outlet property="weakIBOutletLabel" destination="GSQ-eR-0qX" id="rgj-AL-BdW"/>
+                        <outlet property="weakIBOutletPropertyLabel" destination="MaZ-8t-gsS" id="h3J-2I-DEL"/>
+                        <outlet property="weakIBOutletStrongPropertyLabel" destination="e67-ef-D6Y" id="YG3-db-lfa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="133.5832083958021"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tPl-ry-gk8">
+            <objects>
+                <viewController id="0YL-k4-Y6B" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6gd-2G-Iha">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Navigate Back" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ik-ES-2Xh">
+                                <rect key="frame" x="16" y="180" width="343" height="74"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="3PM-WL-CTg"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uL8-5g-gYf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1928.8" y="133.5832083958021"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="OCf-pn-Qjh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nsO-ar-EZu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gXL-4z-I0F">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="AsJ-Ml-h2s"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ks9-GT-Tez" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
