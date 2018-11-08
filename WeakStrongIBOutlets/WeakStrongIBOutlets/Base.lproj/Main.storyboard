@@ -182,9 +182,9 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DMM-hr-uPi">
-                                <rect key="frame" x="62" y="465" width="233" height="30"/>
+                                <rect key="frame" x="83" y="465" width="210" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Navigate To Other View Controller"/>
+                                <state key="normal" title="Change then click to Navigate "/>
                                 <connections>
                                     <segue destination="0YL-k4-Y6B" kind="show" id="SEH-KJ-X1k"/>
                                 </connections>
